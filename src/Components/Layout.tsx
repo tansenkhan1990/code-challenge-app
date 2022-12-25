@@ -1,9 +1,23 @@
-// import { Outlet, useNavigate } from 'react-router-dom';
-import React from 'react';
+import { Outlet, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
+import Header from './Header';
+
 
 const Layout:React.FC = () => {
+    const navigate = useNavigate();
+    useEffect(() => {
+      navigate('home');
+    }, []);
+
   return (
-    <div>Layout</div>
+    <>
+      <header className="header">
+        <Header />
+      </header>
+      <main>
+        <Outlet />
+      </main>
+    </>
   )
 }
 
