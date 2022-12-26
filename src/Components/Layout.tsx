@@ -1,14 +1,13 @@
-import { Outlet, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
-import Header from './Header';
-import { Container } from 'react-bootstrap';
+import { useEffect } from "react";
+import { Container } from "react-bootstrap";
+import { Outlet, useNavigate } from "react-router-dom";
+import Header from "./Header";
 
-
-const Layout:React.FC = () => {
-    const navigate = useNavigate();
-    useEffect(() => {
-      navigate('home');
-    }, []);
+const Layout: React.FC = () => {
+  const navigate = useNavigate();
+  useEffect(() => {
+    navigate("home");
+  }, []);
 
   return (
     <>
@@ -19,7 +18,7 @@ const Layout:React.FC = () => {
         <Outlet />
       </Container>
     </>
-  )
-}
+  );
+};
 
 export default Layout;
