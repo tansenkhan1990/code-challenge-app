@@ -1,6 +1,7 @@
 import { Outlet, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './Header';
+import { Container } from 'react-bootstrap';
 
 
 const Layout:React.FC = () => {
@@ -14,9 +15,9 @@ const Layout:React.FC = () => {
       <header className="header">
         <Header />
       </header>
-      <main>
+      <Container>
         <Outlet />
-      </main>
+      </Container>
     </>
   )
 }
