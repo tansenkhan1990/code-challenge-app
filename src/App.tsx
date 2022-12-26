@@ -5,9 +5,10 @@ import Layout from './Components/Layout';
 
 const App: React.FC = () => {
   return(
-    <Routes>
-      <Route path='/' element={<Layout />} />
-      <Route path='home' element={<Home />} />
+      <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route path="home" element={<Home />} />
+      </Route>
     </Routes>
   )
 }
