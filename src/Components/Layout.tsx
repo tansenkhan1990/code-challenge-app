@@ -20,7 +20,9 @@ const Layout: React.FC = () => {
           <Menus />
         </div>
         <main>
-          <Outlet />
+          <div className="outlet-content">
+            <Outlet />
+          </div>
         </main>
       </Container>
     </>

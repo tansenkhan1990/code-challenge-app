@@ -1,12 +1,20 @@
-import { Button, ButtonGroup } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 const Menus = () => {
   return (
     <>
-      <ButtonGroup>
-        <Button className="mx-1">Start again</Button>
-        <Button className="mx-1">Configure new game</Button>
-      </ButtonGroup>
+      <Button variant="primary">
+        <i className="fa fa-home icon-style"></i>
+        Home
+      </Button>{" "}
+      <Button variant="success">
+        <i className="fa fa-cog icon-style" aria-hidden="true"></i>
+        Setting
+      </Button>{" "}
+      <Button variant="danger">
+        <i className="fa fa-refresh icon-style"></i>
+        Reset
+      </Button>{" "}
     </>
   );
 };
