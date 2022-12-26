@@ -1,8 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import GameConfigure from "./Components/GameConfigure";
-import Home from "./Components/Home";
-import Layout from "./Components/Layout";
+import Layout from "./Components/Lyout/Layout";
+import GameConfigure from "./Components/Pages/GameConfigure";
+import Home from "./Components/Pages/Home";
+import Reset from "./Components/Pages/Reset";
 
 const App: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const App: React.FC = () => {
       <Route path="/" element={<Layout />}>
         <Route path="home" index element={<Home />} />
         <Route path="game-configure" element={<GameConfigure />} />
+        <Route path="reset" element={<Reset />} />
       </Route>
     </Routes>
   );
