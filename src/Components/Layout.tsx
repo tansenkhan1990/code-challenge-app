@@ -11,10 +11,10 @@ const Layout: React.FC = () => {
 
   return (
     <>
-      <header className="header">
-        <Header />
-      </header>
       <Container>
+        <header className="header">
+          <Header />
+        </header>
         <Outlet />
       </Container>
     </>
