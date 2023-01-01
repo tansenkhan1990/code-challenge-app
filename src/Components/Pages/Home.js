@@ -17,8 +17,8 @@ const winCombination = [
   [2,7,12,17,22],
   [3,8,13,18,23],
   [4,9,14,19,24],
-  [0,6,12,18,24],
   [4,8,12,16,20],
+  [0,6,12,18,24],
   
 ];
 
@@ -51,7 +51,7 @@ function TicTacToe() {
       //* O win check
       for (let i = 0; i < 12; i++) {
         if (
-          grid[winCombination[0][0]] === O_PLAYER &&
+          grid[winCombination[i][0]] === O_PLAYER &&
           grid[winCombination[i][1]] === O_PLAYER &&
           grid[winCombination[i][2]] === O_PLAYER &&
           grid[winCombination[i][3]] === O_PLAYER &&
