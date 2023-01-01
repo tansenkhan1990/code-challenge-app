@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Container } from "react-bootstrap";
 import { Outlet, useNavigate } from "react-router-dom";
 import Header from "./Header";
-import Menus from "./Menus";
 
 const Layout: React.FC = () => {
   const navigate = useNavigate();
@@ -16,9 +15,6 @@ const Layout: React.FC = () => {
         <header className="header">
           <Header />
         </header>
-        <div className="float-right menus">
-          <Menus />
-        </div>
         <main>
           <div className="outlet-content">
             <Outlet />
