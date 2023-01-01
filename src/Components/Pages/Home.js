@@ -6,14 +6,20 @@ const INITIAL = "";
 const X_PLAYER = "X";
 const O_PLAYER = "O";
 const winCombination = [
-  [0, 1, 2],
-  [3, 4, 5],
-  [6, 7, 8],
-  [0, 3, 6],
-  [1, 4, 7],
-  [2, 5, 8],
-  [0, 4, 8],
-  [2, 4, 6],
+
+  [0,1,2,3,4],
+  [5,6,7,8,9],
+  [10,11,12,13,14],
+  [15,16,17,18,19],
+  [20,21,22,23,24],
+  [0,5,10,15,20],
+  [1,6,11,16,21],
+  [2,7,12,17,22],
+  [3,8,13,18,23],
+  [4,9,14,19,24],
+  [0,6,12,18,24],
+  [4,8,12,16,20],
+  
 ];
 
 function TicTacToe() {
@@ -26,11 +32,14 @@ function TicTacToe() {
   function isGameOver() {
     if (!gameFinished) {
       //* X win check
-      for (let i = 0; i < 8; i++) {
+      for (let i = 0; i < 12; i++) {
         if (
           grid[winCombination[i][0]] === X_PLAYER &&
           grid[winCombination[i][1]] === X_PLAYER &&
-          grid[winCombination[i][2]] === X_PLAYER
+          grid[winCombination[i][2]] === X_PLAYER &&
+          grid[winCombination[i][3]] === X_PLAYER &&
+          grid[winCombination[i][4]] === X_PLAYER 
+
         ) {
           setGameFinished(true);
           setwinCount({ ...winCount, X: winCount.X + 1 });
@@ -40,11 +49,14 @@ function TicTacToe() {
       }
 
       //* O win check
-      for (let i = 0; i < 8; i++) {
+      for (let i = 0; i < 12; i++) {
         if (
-          grid[winCombination[i][0]] === O_PLAYER &&
+          grid[winCombination[0][0]] === O_PLAYER &&
           grid[winCombination[i][1]] === O_PLAYER &&
-          grid[winCombination[i][2]] === O_PLAYER
+          grid[winCombination[i][2]] === O_PLAYER &&
+          grid[winCombination[i][3]] === O_PLAYER &&
+          grid[winCombination[i][4]] === O_PLAYER 
+          
         ) {
           setGameFinished(true);
           setwinCount({ ...winCount, O: winCount.O + 1 });
